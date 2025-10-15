@@ -1,0 +1,365 @@
+/* CSS reset */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Global Btn */
+button {
+    padding: 10px 15px;
+    border: none;
+}
+
+button:hover {
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+    transform: scale(1.02);
+}
+
+/* Font import */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Root Veriables */
+:root {
+    --purple500: #281154;
+    --purple300: #270082;
+    --red600: #dc0000;
+    --body: #f9f6ff;
+    --max-width: 1200px;
+}
+
+html,
+body {
+    font-family: "roboto", sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+}
+
+/* Navbar Section */
+header {
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 5px 5px;
+    width: 100%;
+    background-color: var(--purple500);
+    z-index: 100;
+}
+
+.container {
+    display: flex;
+    margin: 0 60px;
+    color: white;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 25px;
+}
+
+.container ul {
+    display: flex;
+}
+
+.container ul a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+}
+
+.container ul li {
+    border-bottom: 2px solid var(--purple500);
+}
+
+nav .container ul li:hover {
+    border-bottom: 2px solid white;
+    transition: 0.2s ease-in;
+}
+
+/* Hero Section */
+.hero_section {
+    background-image: url(Images/hero_image.png);
+    height: 100vh;
+    display: grid;
+    color: white;
+    place-items: center;
+    text-align: center;
+    background-size: cover;
+}
+
+.hero_section h1 {
+    font-size: 96px;
+}
+
+.hero_section h3 {
+    font-size: 33px;
+}
+
+.container p {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Music Section */
+.music_section {
+    background-color: var(--purple500);
+    padding-top: 20px;
+}
+
+.music_section .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.ipad_iphone_img img {
+    position: relative;
+    top: 400px;
+    margin-top: -390px;
+}
+
+.container h3 {
+    text-align: center;
+}
+
+.container h4 {
+    text-align: justify;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.primary_btn {
+    background-color: var(--red600);
+    color: white;
+}
+
+/* Abot Music Section */
+.about_music {
+    position: relative;
+    top: 400px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.about_music h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.secondary_btn {
+    background-color: var(--purple300);
+    color: white;
+}
+
+/* Video Section */
+.video_section {
+    background-image: url(Images/video.png);
+    position: relative;
+    top: 400px;
+    height: 60vh;
+    background-size: cover;
+
+}
+
+.video_section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
+
+/* Gift Card Section */
+#gift {
+    position: relative;
+    top: 400px;
+    padding-top: 50px;
+    display: flex;
+    gap: 30px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.gift_content {
+    width: 800px;
+    text-align: center;
+}
+
+.gift_content h3 {
+    font-size: 30px;
+}
+
+#gift p {
+
+    padding-top: 10px;
+}
+
+.gift_secondPara {
+    padding-bottom: 20px;
+}
+
+.gift_content .secondary_btn {
+    margin-top: 40px;
+}
+
+/* Footer Section */
+footer {
+    position: relative;
+    top: 400px;
+    background-color: var(--purple500);
+}
+
+.footer_links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.footer_uper {
+    padding-bottom: 50px;
+}
+
+.footer_links ul {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.footer_links h4 {
+    margin: 0;
+    font-size: 20px;
+    border-bottom: 2px solid white;
+    text-align: left;
+    width: 100%;
+}
+
+.footer_lower {
+    height: 50px;
+    background-color: var(--purple300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-spacing: 1.02;
+    color: white;
+
+}
+
+/* Responsive Section */
+@media (max-width:850px) {
+    .container {
+        width: 90vw;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .container ul li {
+        font-size: 8px;
+    }
+
+    .hero_section .container h1 {
+        font-size: 15px;
+    }
+
+    .music_section .container {
+        height: 55vh;
+        margin-top: -60px;
+    }
+
+    #hero h3 {
+        font-size: 12px;
+        text-align: justify;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .container p {
+        font-size: 10px;
+    }
+
+    #music h2 {
+        font-size: 15px;
+    }
+
+    #music h4 {
+        font-size: 12px
+    }
+
+    .primary_btn {
+        font-size: 10px;
+    }
+
+    .gift_content {
+        width: fit-content;
+    }
+
+    .container .ipad_iphone_img img {
+        width: 300px;
+        height: auto;
+        position: relative;
+        top: 200px;
+        margin-top: -200px;
+    }
+
+    .about_music {
+        position: relative;
+        top: 156px;
+    }
+
+    .about_music img {
+        width: 300px;
+        height: auto;
+    }
+
+    .video_section {
+        position: relative;
+        top: 172px;
+        height: 40vh;
+    }
+
+    .video_section .container {
+        padding-top: 30px;
+    }
+
+    #gift {
+        flex-direction: column;
+        position: relative;
+        top: 176px;
+    }
+
+    .gift_card img {
+        width: 200px;
+    }
+
+    .hero_section {
+        height: 30vh;
+    }
+    footer{
+        top:230px;
+    }
+    .footer_uper .container{
+        display: grid;
+        column-gap: 5px;
+       grid-template-rows: repeat(2,1fr); 
+       grid-template-columns: auto auto;
+    }   
+    .footer_uper{
+        padding-bottom: 20px;
+    }
+
+}
